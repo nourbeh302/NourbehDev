@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  /* Colors */
+  --light-base: hsla(24, 57%, 91%, 100%);
+  --dark-base: hsla(22, 7%, 22%, 100%);
+  --dark-muted: hsl(22, 8%, 46%, 100%);
+
+  /* Fonts */
+  --font-display: "Playfair Display SC", serif;
+  --font-text: "Plus Jakarta Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.light-theme {
+  color: var(--dark-base);
+  background-color: var(--light-base);
+  border-color: var(--dark-base);
+}
+
+span.divider {
+  display: block !important;
+  transition: all 1000ms ease-in;
+}
+
+span.divider.horizontal {
+  margin-block: 2em;
+
+  width: 0%;
+  height: 0.5px;
+}
+
+span.divider.horizontal[visible] {
+  width: 100%;
+}
+
+span.divider.vertical {
+  margin-inline: 3em;
+
+  height: 0%;
+  width: 0.5px;
+}
+
+span.divider.vertical[visible] {
+  height: 100%;
+}
+
+body.light-theme span.divider {
+  background: var(--dark-base);
+}
+
+body.light-theme .page-wrapper {
+  border-color: var(--dark-base);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display);
+}
+
+@media only screen and (min-width: 626px) {
+  span.divider.horizontal {
+    margin-block: 3em;
+  }
+}

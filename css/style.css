@@ -79,11 +79,12 @@ button.navbar-toggler span.navbar-toggler-bar {
 }
 
 button.navbar-toggler span.navbar-toggler-bar:nth-child(1) {
-  top: 30%;
+  top: 67%;
+  width: 70%;
 }
 
 button.navbar-toggler span.navbar-toggler-bar:nth-child(2) {
-  top: 70%;
+  top: 33%;
 }
 
 button.navbar-toggler[enabled] span.navbar-toggler-bar {

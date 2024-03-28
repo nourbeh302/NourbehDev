@@ -5,6 +5,25 @@ var observer = new IntersectionObserver((entries) =>
   })
 );
 
+function calculateAge(birthDate) {
+    var today = new Date();
+    var birthDate = new Date(birthDate);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+var ageSpan = document.getElementById("age");
+var copyrightsSpan = document.getElementById("copyrights-span");
+
+ageSpan.innerHTML = calculateAge("12/12/2001");
+
+let currentYear = new Date().getFullYear();
+copyrightsSpan.innerHTML = currentYear.toString();
+
 const dividers = document.querySelectorAll("span.divider");
 const svgIcons = document.querySelectorAll("svg");
 const projectsContainer = document.querySelectorAll(".projects-container");
